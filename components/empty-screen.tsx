@@ -23,11 +23,7 @@ export function EmptyScreen() {
           Welcome to SkinSense Virtual Assistant!
         </h1>
         <p className="leading-normal text-muted-foreground">
-          Ready to find your perfect foundation match? 
-          At SkinSense, we specialize in helping you choose the best foundation shade 
-          tailored to your skin tone, based on the photo you upload, your budget, 
-          and specific skin conditions. 
-          Let's start your journey to flawless makeup application! 
+          Ready to find your perfect foundation match? At SkinSense, we specialize in helping you choose the best foundation shade tailored to your skin tone, based on the photo you upload, your budget, and specific skin conditions. Let&apos;s start your journey to flawless makeup application! 
         </p>
       </div>
     </div>
