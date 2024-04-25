@@ -36,24 +36,24 @@ export function ChatPanel({
 
   const exampleMessages = [
     {
-      heading: 'What are the',
-      subheading: 'trending memecoins today?',
-      message: `What are the trending memecoins today?`
+      heading: 'What is the best',
+      subheading: 'moisturizer for dry skin?',
+      message: `What is the best moisturizer for dry skin?`
     },
     {
-      heading: 'What is the price of',
-      subheading: '$DOGE right now?',
-      message: 'What is the price of $DOGE right now?'
+      heading: 'Can you recommend',
+      subheading: 'a foundation for oily skin?',
+      message: 'Can you recommend a foundation for oily skin?'
     },
     {
-      heading: 'I would like to buy',
-      subheading: '42 $DOGE',
-      message: `I would like to buy 42 $DOGE`
+      heading: 'How do I apply',
+      subheading: 'foundation correctly?',
+      message: `How do I apply foundation correctly?`
     },
     {
       heading: 'What are some',
-      subheading: `recent events about $DOGE?`,
-      message: `What are some recent events about $DOGE?`
+      subheading: `tips for long-lasting lipstick?`,
+      message: `What are some tips for long-lasting lipstick?`
     }
   ]
 

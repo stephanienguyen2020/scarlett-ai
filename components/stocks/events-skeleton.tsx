@@ -1,9 +1,9 @@
 const placeholderEvents = [
   {
-    date: '2022-10-01',
-    headline: 'NVIDIA releases new AI-powered graphics card',
+    date: '2024-04-19',
+    headline: 'Toxic chemicals from microplastics can be absorbed through skin',
     description:
-      'NVIDIA unveils the latest graphics card infused with AI capabilities, revolutionizing gaming and rendering experiences.'
+      'Toxic chemicals used to flame-proof plastic materials can be absorbed into the body through skin, via contact with microplastics, new research shows.'
   }
 ]
 
