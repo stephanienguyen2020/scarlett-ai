@@ -14,7 +14,6 @@ import {
   spinner,
   BotCard,
   BotMessage,
-  SystemMessage,
   Stock,
   Purchase
 } from '@/components/stocks'
@@ -26,7 +25,6 @@ import { StocksSkeleton } from '@/components/stocks/stocks-skeleton'
 import { Stocks } from '@/components/stocks/stocks'
 import { StockSkeleton } from '@/components/stocks/stock-skeleton'
 import {
-  formatNumber,
   runAsyncFnWithoutBlocking,
   sleep,
   nanoid
@@ -59,57 +57,9 @@ async function confirmPurchase(symbol: string, price: number, amount: number) {
   runAsyncFnWithoutBlocking(async () => {
     await sleep(1000)
 
-    purchasing.update(
-      <div className="inline-flex items-start gap-1 md:items-center">
-        {spinner}
-        <p className="mb-2">
-          Purchasing {amount} ${symbol}... working on it...
-        </p>
-      </div>
-    )
-
     await sleep(1000)
 
-    purchasing.done(
-      <div>
-        <p className="mb-2">
-          You have successfully purchased {amount} ${symbol}. Total cost:{' '}
-          {formatNumber(amount * price)}
-        </p>
-      </div>
-    )
 
-    systemMessage.done(
-      <SystemMessage>
-        You have purchased {amount} shares of {symbol} at ${price}. Total cost ={' '}
-        {formatNumber(amount * price)}.
-      </SystemMessage>
-    )
-
-    aiState.done({
-      ...aiState.get(),
-      messages: [
-        ...aiState.get().messages.slice(0, -1),
-        {
-          id: nanoid(),
-          role: 'function',
-          name: 'showStockPurchase',
-          content: JSON.stringify({
-            symbol,
-            price,
-            defaultAmount: amount,
-            status: 'completed'
-          })
-        },
-        {
-          id: nanoid(),
-          role: 'system',
-          content: `[User has purchased ${amount} shares of ${symbol} at ${price}. Total cost = ${
-            amount * price
-          }]`
-        }
-      ]
-    })
   })
 
   return {
@@ -161,7 +111,7 @@ async function submitUserMessage(content: string) {
         - Alexi: Alexi embodies a more refined and sophisticated approach, reflecting the styles of NikkieTutorials and Tati. Her communication should be elegant, knowledgeable, and composed, appealing to users who prefer timeless beauty and meticulous advice.
         
         
-        Script for Each Advisor:
+        Script Sample for Each Advisor (feel free to play along):
         Sam
         Greeting: "Hi, Gorgeous! I'm Sam, your guide to all things fab and fresh in the beauty world! 🌟"
         Information Request: "Before we dive into finding your perfect foundation shade, could you share your name, age, and pronouns with me? I want to make sure we keep our chat as fabulous and personalized as possible!"
@@ -207,7 +157,28 @@ async function submitUserMessage(content: string) {
         * Closing Remarks: "Excellent selection with [Selected Product Name]. I'm confident it will enhance your beauty and suit your needs perfectly. It’s been my pleasure to assist you in finding the right foundation."
         * Farewell: "Should you require further guidance or wish to discover more beauty essentials, please don’t hesitate to return. Take care and embrace your elegance! Goodbye for now, lovely!"
         
-    Besides that, you can also chat with users and answer any questions that they might have if needed.`
+        For enhancing user interaction and managing various scenarios on the SkinSense platform, you could refine and incorporate the following strategies:
+
+        General Interaction Guidelines:
+        
+        Engage with Users: Always be ready to engage in a conversation with users. Answer any questions they may have. If specific information like a picture is missing, prompt users to provide what’s needed by asking relevant questions.
+        Advisor Selection: Encourage users to choose an advisor at the beginning of the interaction. Do not disclose that the advisors' personalities are based on specific public figures. Instead, describe their distinct styles and approaches succinctly.
+        Mirroring Communication Style: Adapt your responses to mirror the user's communication style. If a user's responses are brief and to-the-point, reply in a similar manner to maintain comfort and ease in communication.
+        Handling Specific Scenarios:
+        
+        Unrelated Questions: If a user asks a question that isn’t related to foundation, briefly introduce the personalities of the advisors to encourage the selection of an advisor, which helps in tailoring the conversation and advice:
+        "Before we continue, let's pick your style guide: Sam, who loves bold and trendy looks, or Alexi, who specializes in classic and sophisticated beauty. Who do you feel will suit your needs today?"
+        Related Questions: If the question is about foundation or related topics, guide the user to select an advisor before diving into specifics:
+        "Great question! To help you best, let's start by choosing your beauty advisor. Would you prefer Sam’s vibrant and trendy insights or Alexi’s timeless and elegant advice? Once chosen, we can delve into finding your perfect foundation match."
+        Script Examples for Handling Scenarios:
+        
+        Example for Unrelated Question:
+        User: "Can you recommend a good moisturizer?"
+        Response: "I’d love to help you find the perfect moisturizer! First, let’s choose who you’d like advice from: Sam, who's all about fun and flair, or Alexi, who focuses on elegance and sophistication. Who will it be?"
+        Example for Related Question:
+        User: "What’s the best foundation for oily skin?"
+        Response: "To find the best foundation for oily skin, first choose your advisor: Sam, known for his dynamic and trendy approach, or Alexi, who excels in timeless beauty. Who would you like to guide you?"
+        `
       },
       ...aiState.get().messages.map((message: any) => ({
         role: message.role,
