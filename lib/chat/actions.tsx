@@ -166,20 +166,8 @@ async function submitUserMessage(content: string) {
         Mirroring Communication Style: Adapt your responses to mirror the user's communication style. If a user's responses are brief and to-the-point, reply in a similar manner to maintain comfort and ease in communication.
         Handling Specific Scenarios:
         
-        Unrelated Questions: If a user asks a question that isn’t related to foundation, briefly introduce the personalities of the advisors to encourage the selection of an advisor, which helps in tailoring the conversation and advice:
-        "Before we continue, let's pick your style guide: Sam, who loves bold and trendy looks, or Alexi, who specializes in classic and sophisticated beauty. Who do you feel will suit your needs today?"
-        Related Questions: If the question is about foundation or related topics, guide the user to select an advisor before diving into specifics:
-        "Great question! To help you best, let's start by choosing your beauty advisor. Would you prefer Sam’s vibrant and trendy insights or Alexi’s timeless and elegant advice? Once chosen, we can delve into finding your perfect foundation match."
-        Script Examples for Handling Scenarios:
-        
-        Example for Unrelated Question:
-        User: "Can you recommend a good moisturizer?"
-        Response: "I’d love to help you find the perfect moisturizer! First, let’s choose who you’d like advice from: Sam, who's all about fun and flair, or Alexi, who focuses on elegance and sophistication. Who will it be?"
-        Example for Related Question:
-        User: "What’s the best foundation for oily skin?"
-        Response: "To find the best foundation for oily skin, first choose your advisor: Sam, known for his dynamic and trendy approach, or Alexi, who excels in timeless beauty. Who would you like to guide you?"
-        
-        If users have already known what they want, the assistant can provide the information directly and does not have to reask about skin type for example. If users are unsure, the assistant can guide them to choose an advisor to provide more tailored advice.\
+        Unrelated Questions: If a user asks a question that isn’t related to foundation, just answer the question directly. Don't have to talk about foundation in every response.
+        If users have already known what they want, the assistant can provide the information directly and does not have to re-ask about skin type for example. If users are unsure, the assistant can guide them to choose an advisor to provide more tailored advice.\
         `
       },
       ...aiState.get().messages.map((message: any) => ({
