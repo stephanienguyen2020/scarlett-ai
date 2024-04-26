@@ -23,8 +23,7 @@ export function EmptyScreen() {
           Welcome to Scarlett AI
         </h1>
         <p className="leading-normal text-muted-foreground">
-          Scarlett AI is your new hub for connecting, learning, and engaging with professionals and enthusiasts alike. Whether you're here to find networking opportunities, dive into tailored events and workshops, or explore interactive content, Scarlett AI is designed to enhance your personal and professional growth. Let's embark on a journey of discovery and connection, personalized just for you!
-        </p>
+        Scarlett AI is your new hub for connecting, learning, and engaging with professionals and enthusiasts alike. Whether you&apos;re here to find networking opportunities, dive into tailored events and workshops, or explore interactive content, Scarlett AI is designed to enhance your personal and professional growth. Let&apos;s embark on a journey of discovery and connection, personalized just for you!</p>
       </div>
     </div>
   )
