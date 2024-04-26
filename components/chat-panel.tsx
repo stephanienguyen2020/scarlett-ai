@@ -36,24 +36,24 @@ export function ChatPanel({
 
   const exampleMessages = [
     {
-      heading: 'What is the best',
-      subheading: 'moisturizer for dry skin?',
-      message: `What is the best moisturizer for dry skin?`
+      heading: 'Any blockchain events',
+      subheading: 'in NYC this weekend?',
+      message: `Any blockchain events in NYC this weekend?`
     },
     {
-      heading: 'Can you recommend',
-      subheading: 'a foundation for oily skin?',
-      message: 'Can you recommend a foundation for oily skin?'
+      heading: 'Tips for effective',
+      subheading: 'networking?',
+      message: 'Tips for effective networking?'
     },
     {
-      heading: 'How do I apply',
-      subheading: 'foundation correctly?',
-      message: `How do I apply foundation correctly?`
+      heading: 'What are the best practices',
+      subheading: 'for expanding my professional network here?',
+      message: `What are the best practices for expanding my professional network here?`
     },
     {
-      heading: 'What are some',
-      subheading: `tips for long-lasting lipstick?`,
-      message: `What are some tips for long-lasting lipstick?`
+      heading: 'How can I make impactful connections',
+      subheading: `that benefit my career?`,
+      message: `How can I make impactful connections that benefit my career?`
     }
   ]
 

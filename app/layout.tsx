@@ -13,10 +13,10 @@ export const metadata = {
     ? new URL(`https://${process.env.VERCEL_URL}`)
     : undefined,
   title: {
-    default: 'SkinSense - Virtual Assistant',
-    template: `SkinSense AI Chatbot`
+    default: 'Scarlett AI - From Chat to Community',
+    template: `Scarlett AI Chatbot`
   },
-  description: 'An AI-powered chatbot that helps users find their perfect foundation shade matching their skin tone',
+  description: 'AI-Powered Matching System, Event and Workshop Coordination, and Content Interaction Enhancements',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',

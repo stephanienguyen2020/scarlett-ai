@@ -20,10 +20,10 @@ export function EmptyScreen() {
     <div className="mx-auto max-w-2xl px-4">
       <div className="flex flex-col gap-2 rounded-lg border bg-background p-8">
         <h1 className="text-lg font-semibold">
-          Welcome to SkinSense Virtual Assistant!
+          Welcome to Scarlett AI
         </h1>
         <p className="leading-normal text-muted-foreground">
-          Ready to find your perfect foundation match? At SkinSense, we specialize in helping you choose the best foundation shade tailored to your skin tone, based on the photo you upload, your budget, and specific skin conditions. Let&apos;s start your journey to flawless makeup application! 
+          Scarlett AI is your new hub for connecting, learning, and engaging with professionals and enthusiasts alike. Whether you're here to find networking opportunities, dive into tailored events and workshops, or explore interactive content, Scarlett AI is designed to enhance your personal and professional growth. Let's embark on a journey of discovery and connection, personalized just for you!
         </p>
       </div>
     </div>
